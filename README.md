@@ -1,3 +1,34 @@
+# harfbuzz
+GNU Emacs30.0.50に含まれる`java/INSTALL`にしたがって取得したharfbuzzモジュールのレポジトリ。
+
+# 作成した手順
+1. [Android ports for GNU Emacsのソース書庫](https://sourceforge.net/projects/android-ports-for-gnu-emacs/files/harfbuzz-7.1.0-emacs.tar.gz)を取得して展開
+
+```bash
+$: wget https://sourceforge.net/projects/android-ports-for-gnu-emacs/files/harfbuzz-7.1.0-emacs.tar.gz
+$: tar xvfz harfbuzz-7.1.0-emacs.tar.gz
+```
+
+2. gitレポジトリとして初期化し修正用ブランチ`my/master`をcheckout
+
+```bash
+$: cd harfbuzz-7.1.0
+$: git init
+$: git checkout -b my/master
+```
+
+3. 空レポジトリにpush
+
+```bash
+$: gh repo create my-harfbuzz-7.1.0 --public
+$: git remote add mine https://github.com/JIBUN/my-harfbuzz-7.1.0
+$: git branch -M my/master
+$: git push -u mine my/master
+```
+
+以上。
+ここから以下は元ソースの`README.md`
+
 [![Linux CI Status](https://github.com/harfbuzz/harfbuzz/workflows/linux-ci/badge.svg)](https://github.com/harfbuzz/harfbuzz/workflows/linux-ci/badge.svg)
 [![CircleCI Build Status](https://circleci.com/gh/harfbuzz/harfbuzz/tree/main.svg?style=svg)](https://circleci.com/gh/harfbuzz/harfbuzz/tree/main)
 [![OSS-Fuzz Status](https://oss-fuzz-build-logs.storage.googleapis.com/badges/harfbuzz.svg)](https://oss-fuzz-build-logs.storage.googleapis.com/index.html)
